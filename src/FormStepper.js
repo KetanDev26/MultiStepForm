@@ -16,10 +16,19 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     marginRight: theme.spacing(1),
+    color:"white",
+    backgroundColor:"#00BFFF"
   },
   instructions: {
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
+    marginLeft:theme.spacing(60),
+   
+    width:400,
+    height:200,
+    color:"black",
+    
+
   },
 }));
 
@@ -113,11 +122,12 @@ export default function HorizontalLinearStepper(props) {
         {activeStep === steps.length ? (
           <div>
             <Typography className={classes.instructions}>
-              Hey!! Your form is successfully submitted!
-            </Typography>
-            <Button onClick={handleReset} className={classes.button}>
+            ✔   Hey!! Your form is successfully submitted!
+              <Button onClick={handleReset} className={classes.button}>
               Want more ride?
             </Button>
+            </Typography>
+            
           </div>
         ) : (
           <div>
