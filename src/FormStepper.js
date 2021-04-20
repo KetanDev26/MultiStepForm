@@ -113,10 +113,10 @@ export default function HorizontalLinearStepper(props) {
         {activeStep === steps.length ? (
           <div>
             <Typography className={classes.instructions}>
-              All steps completed - you&apos;re finished
+              Hey!! Your form is successfully submitted!
             </Typography>
             <Button onClick={handleReset} className={classes.button}>
-              Reset
+              Want more ride?
             </Button>
           </div>
         ) : (
@@ -128,7 +128,7 @@ export default function HorizontalLinearStepper(props) {
 
 
 
-              {activeStep === 0 ?  <Button disabled onClick={handleBack} className={classes.button} style={{background:"blue",color:"white"}}>
+              {activeStep === 0 ?  <Button disabled onClick={handleBack} className={classes.button} style={{background:"#ADD8E6",color:"white"}}>
                 Back
               </Button> : (activeStep === 1 ? <Button onClick={handleBack} className={classes.button} style={{background:"blue",color:"white"}}>
                 Back
