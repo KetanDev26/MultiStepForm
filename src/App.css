@@ -24,6 +24,12 @@
   color: white;
 }
 
+label{
+  font-size: small !important;
+  color:#7c8490;
+  font-weight: 600;
+}
+
 .App-link {
   color: #61dafb;
 }
