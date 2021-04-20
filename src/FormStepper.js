@@ -22,10 +22,9 @@ const useStyles = makeStyles((theme) => ({
   instructions: {
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
-    marginLeft:theme.spacing(60),
+    
    
-    width:400,
-    height:200,
+   
     color:"black",
     
 
