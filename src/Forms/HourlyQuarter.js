@@ -109,21 +109,34 @@ setValue(event.target.value);
 {/* //////////////////////////////////////////////////////////////////////// */}
 
             <div  style={{position:"absolute",left:700,top:300}}>
-            <label style={{position:'relative',top:0,left:0}}>Dropoff Location</label><br></br>
+            <label style={{position:'relative',top:0,left:70}}>Dropoff Location</label><br></br>
 
 
-
+            <div style={{width:400,height:200,position:"absolute",overflow:"auto", 
+        
+        top:78}}>
                 {stoparray.map(id=>{
 
 
-                    return(   <DropoffHourlyquarter removestops={()=>removestops(id)}  /> )
+                    return(   
+                    
+                     
+                    
+                    
+                    <DropoffHourlyquarter removestops={()=>removestops(id)}   />  
+                    
+                   
+                    
+                    )
 
 
 
 })}
 
+</div>
 
-                <button type="button" class="btn btn-primary" style={{position:"absolute",top:30}} onClick={addStops}>Add Stop</button>
+
+                <button type="button" class="btn btn-primary" style={{position:"absolute",top:30,left:70}} onClick={addStops}>Add Stop</button>
               
 
 

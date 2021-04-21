@@ -16,36 +16,39 @@ export default function DropoffHourlyquarter(props) {
         };
 
     return (
-    
-            
-                                    
-            <div style={{position:"relative",top:100}}>
 
 
-<div style={{position:"absolute",left:100,top:30}}>
-            <FormControl component="fieldset">
+    <div style={{marginTop:50,marginLeft:-40}}>
+        <FormControl component="fieldset">
   
-  <RadioGroup aria-label="gender" name="gender1" value={values} onChange={handleChange}>
-    <FormControlLabel value="Address" control={<Radio />} label="Address" />
-    <FormControlLabel style={{marginTop:-50,marginLeft:100}} value="Airport" control={<Radio />} label="Airport" />
- 
-  </RadioGroup>
-</FormControl>
-            </div>
-
-{values==="Airport" ? <div style={{position:"relative",marginTop:50,left:100}}>
+        <RadioGroup aria-label="gender" name="gender1" value={values} onChange={handleChange}>
+          <FormControlLabel value="Address" control={<Radio />} label="Address" />
+          <FormControlLabel style={{marginTop:-50,marginLeft:100}} value="Airport" control={<Radio />} label="Airport" />
+       <img src="https://worldlimobiz.com/CTairlink/wp-content/themes/u-design/images/cross.png" style={{
+           width:20,height:20,position:"absolute",left:260,top:10, cursor:"pointer"
+       }} onClick={props.removestops}></img>
+        </RadioGroup>
+      </FormControl>
+                                    
+           
+                                    {values==="Airport" ? <div style={{position:"relative",marginTop:0,left:110}}>
                    
-                   <input type="text" placeholder="Airport name"class="form-control" style={{width:300}}></input><br></br>
-                   <input type="text"  placeholder="Airline" class="form-control" style={{width:170,position:"relative",left:0}}></input><br></br>
-                   <input type="text"  placeholder="flight" class="form-control" style={{width:90,position:"relative",left:180,top:-62}}></input>
-                  
-                  
-               </div> : (values === "Address" ? <div style={{position:"relative",top:180,left:100}} >
-        
-        <input type="text" placeholder="Address" class="form-control" style={{width:300,position:"absolute",top:-70}} ></input>
-    </div> : null)}
+                                    <input type="text" placeholder="Airport name"class="form-control" style={{width:300}}></input><br></br>
+                                    <input type="text"  placeholder="Airline" class="form-control" style={{width:170,position:"relative",left:0}}></input><br></br>
+                                    <input type="text"  placeholder="flight" class="form-control" style={{width:90,position:"relative",left:180,top:-62}}></input>
+                                   
+                                   
+                                </div> : (values === "Address" ? <div style={{position:"relative",top:0,left:110}} >
+                         
+                         <input type="text" placeholder="Street Address" class="form-control" style={{width:300,position:"absolute"}} ></input>
+                     </div> : null)}
 
-         </div>
-      
+
+                     </div>
+
+
+                  
+        
+                     
     )
 }
