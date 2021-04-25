@@ -1,8 +1,7 @@
 import React from 'react'
-
-import { FormControlLabel, FormLabel, Paper, Radio, RadioGroup } from '@material-ui/core'
-
-
+import { FormControlLabel, Radio, RadioGroup } from '@material-ui/core'
+import "../App.css"
+import "../Tablet.css"
 import FormControl from '@material-ui/core/FormControl';
 
 export default function DropoffHourlyquarter(props) {
@@ -15,6 +14,9 @@ export default function DropoffHourlyquarter(props) {
         setvalues(event.target.value);
         };
 
+
+
+        
     return (
 
 
@@ -31,14 +33,15 @@ export default function DropoffHourlyquarter(props) {
       </FormControl>
                                     
            
-                                    {values==="Airport" ? <div style={{position:"relative",marginTop:0,left:110}}>
-                   
+                                    {values==="Airport" ? <div style={{position:"relative",marginTop:0,left:110}} >
+                                    <div className="hqdropoffinput">
                                     <input type="text" placeholder="Airport name"class="form-control" style={{width:300}}></input><br></br>
+                                    </div>
                                     <input type="text"  placeholder="Airline" class="form-control" style={{width:170,position:"relative",left:0}}></input><br></br>
                                     <input type="text"  placeholder="flight" class="form-control" style={{width:90,position:"relative",left:180,top:-62}}></input>
                                    
                                    
-                                </div> : (values === "Address" ? <div style={{position:"relative",top:0,left:110}} >
+                                </div> : (values === "Address" ? <div style={{position:"relative",top:0,left:110}} className="hqdropoffaddinput" >
                          
                          <input type="text" placeholder="Street Address" class="form-control" style={{width:300,position:"absolute"}} ></input>
                      </div> : null)}

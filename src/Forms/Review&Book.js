@@ -10,7 +10,7 @@ export default function ReviewBook() {
     return (
         <div style={{marginLeft:200}}>
              
-                <Paper style={{height:840,width:300,background:"#f6f6f6"}} elevation={5}>
+                <Paper style={{height:840,width:300,background:"#f6f6f6"}} elevation={5} className="order-info1">
                 <Paper style={{width:300,height:40,backgroundColor:"white",textAlign:"center"}} elevation={3}>
                    Order Info
                     </Paper>
@@ -92,15 +92,15 @@ EXTRAS</label>
 {/*  Complete reservation form/////////////////////////////////////////////////////////////////////////////////////
  */}
       
-                <Paper style={{ position:"relative", height:800,width:700,background:"#f6f6f6",marginLeft:400,marginTop:-845}} elevation={5}>
-                    <Paper style={{width:700,height:40,backgroundColor:"white",textAlign:"center"}} elevation={3}>
+                <Paper style={{ position:"relative", height:800,width:700,background:"#f6f6f6",marginLeft:400,marginTop:-845}} elevation={5} className="extras1">
+                    <Paper style={{width:700,height:40,backgroundColor:"white",textAlign:"center"}} elevation={3} className="strip1">
                     Complete reservation form
                     </Paper>
 
-                    <div style={{textAlign:"left",margin:20}}> 
-                        <label style={{backgroundColor:"#EEEEEE",width:700,height:30,top:45,left:1,position:"absolute",color:"#7c8490",}}>PERSONAL INFORMATION</label>
+                    <div style={{textAlign:"left",margin:20}} className="reservform"> 
+                        <label className="personal" style={{backgroundColor:"#EEEEEE",width:700,height:30,top:45,left:1,position:"absolute",color:"#7c8490",}}>PERSONAL INFORMATION</label>
                         <br></br>
-                        <div style={{top:30}}>
+                        <div style={{top:30}} className="firstname">
                             <div class="form-group">
                               <label for="">FIRST NAME</label>
                               <input type="text"
@@ -108,7 +108,7 @@ EXTRAS</label>
                                 style={{width:200}}/>
                              
                             </div>
-                            <div class="form-group" style={{marginLeft:350,top:80,position:"absolute"}}>
+                            <div class="form-group" style={{marginLeft:350,top:80,position:"absolute"}}  className="lastname">
                               <label for="">LAST NAME</label>
                               <input type="text"
                                 class="form-control" name="" id="" aria-describedby="helpId" placeholder="Passenger's last name"
@@ -116,7 +116,7 @@ EXTRAS</label>
                              
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group"  className="emailaddress">
                               <label for="">EMAIL-ADDRESS</label>
                               <input type="email"
                                 class="form-control" name="" id="" aria-describedby="helpId" placeholder="Email address"
@@ -124,7 +124,7 @@ EXTRAS</label>
                              
                             </div>
 
-                            <div class="form-group" style={{marginLeft:350,top:170,position:"absolute"}}>
+                            <div class="form-group" style={{marginLeft:350,top:170,position:"absolute"}}  className="phonenu">
                               <label for="">PHONE NUMBER</label>
                               <input type="number"
                                 class="form-control" name="" id="" aria-describedby="helpId" placeholder="Passenger's cell phone"
@@ -146,12 +146,12 @@ EXTRAS</label>
 
 
 
-                    <div style={{textAlign:"left",margin:20}}> 
-                        <label style={{backgroundColor:"#EEEEEE",width:700,height:30,top:270,left:1,position:"absolute",color:"#7c8490",}}>CREDIT CARD INFORMATION</label>
+                    <div style={{textAlign:"left",margin:20}} className="creditinfo"> 
+                        <label  className="strip3" style={{backgroundColor:"#EEEEEE",width:700,height:30,top:270,left:1,position:"absolute",color:"#7c8490",}}>CREDIT CARD INFORMATION</label>
                         <br></br>
                         <br></br>
                         <br></br>
-                        <div style={{top:100}}>
+                        <div style={{top:100}} className="cardnu"> 
                             <div class="form-group">
                               <label for="">CARD NUMBER</label>
                               <input type="text"
@@ -161,8 +161,8 @@ EXTRAS</label>
                             </div>
 
 
-                            <div>
-                            <label for="" style={{marginLeft:300,position:"absolute"}}>EXPIRATION DATE</label>
+                            <div className="expdate">
+                            <label  className="explabel" for="" style={{marginLeft:300,position:"absolute"}} >EXPIRATION DATE</label>
                                 <div class="form-group" style={{width:90,marginTop:-80,marginLeft:300}}>
                                 <label for=""></label>
                                   <select class="form-control" name="" id="">
@@ -172,7 +172,7 @@ EXTRAS</label>
                                   </select>
                                 </div>
 
-                                <div class="form-group" style={{width:90,marginTop:-79,marginLeft:400}} >
+                                <div class="form-group" style={{width:90,marginTop:-79,marginLeft:400}}  className="expyears">
                                   <label for=""></label>
                                   <select class="form-control" name="" id="">
                                   {years.map((y)=>(
@@ -184,7 +184,7 @@ EXTRAS</label>
 
 
                            
-                                <div class="form-group"  style={{width:90,marginTop:-84,marginLeft:520}}>
+                                <div class="form-group"  style={{width:90,marginTop:-84,marginLeft:520}} className="cvv">
                                   <label for="">CVV</label>
                                   <input type="number"
                                     class="form-control" name="" id="" aria-describedby="helpId" placeholder="XXX"
@@ -193,7 +193,7 @@ EXTRAS</label>
                                 </div>
                          
 
-                                <div class="form-group">
+                                <div class="form-group" className="zipcode" >
                                   <label for="">BILLING ZIP-CODE</label>
                                   <input type="text"
                                     class="form-control" name="" id="" aria-describedby="helpId" placeholder="Zip Code"
@@ -220,11 +220,11 @@ EXTRAS</label>
 
 
 
-                    <div style={{textAlign:"left",margin:20}}> 
-                        <label style={{backgroundColor:"#EEEEEE",width:700,height:30,top:540,left:1,position:"absolute",color:"#7c8490",}}>OTHER OPTIONS</label>
-                        <label style={{marginTop:130  }}>SPECIAL REQUESTS</label>
-                                    <div style={{marginTop:0  }}>
-                                       
+                    <div style={{textAlign:"left",margin:20}} className="others" > 
+                        <label className="strip4" style={{backgroundColor:"#EEEEEE",width:700,height:30,top:540,left:1,position:"absolute",color:"#7c8490",}}>OTHER OPTIONS</label>
+                       
+                                    <div style={{marginTop:0  }} className="special">
+                                    <label style={{marginTop:130  }}>SPECIAL REQUESTS</label>
                                         <div class="form-group">
                                           <label for=""></label>
                                           <textarea class="form-control" name="" id="" rows="3"></textarea>

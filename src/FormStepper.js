@@ -1,4 +1,5 @@
 import React from 'react';
+import "./App.css"
 import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
@@ -9,6 +10,9 @@ import CreateRequest from './Forms/CreateRequest';
 import ChooseAcar from './Forms/ChooseAcar';
 import ChooseExtras from './Forms/ChooseExtras';
 import ReviewBook from './Forms/Review&Book';
+import "./Tablet.css"
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     color:"white",
     backgroundColor:"#00BFFF"
   },
+ 
   instructions: {
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
@@ -40,8 +45,8 @@ function getSteps() {
 export default function HorizontalLinearStepper(props) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
-  const [skipped, setSkipped] = React.useState(new Set());
   const steps = getSteps();
+  let widths=matchMedia('(max-width: 600px)').matches;
 
   function getStepContent(step) {
     switch (step) {
@@ -58,61 +63,39 @@ export default function HorizontalLinearStepper(props) {
     }
   }
 
-  const isStepOptional = (step) => {
-    return step === 1;
-  };
-
-  const isStepSkipped = (step) => {
-    return skipped.has(step);
-  };
+  
+ 
 
   const handleNext = () => {
-    let newSkipped = skipped;
-    if (isStepSkipped(activeStep)) {
-      newSkipped = new Set(newSkipped.values());
-      newSkipped.delete(activeStep);
-    }
+    
 
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setSkipped(newSkipped);
+   // setSkipped(newSkipped);
   };
 
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleSkip = () => {
-    if (!isStepOptional(activeStep)) {
-      // You probably want to guard against something like this,
-      // it should never occur unless someone's actively trying to break something.
-      throw new Error("You can't skip a step that isn't optional.");
-    }
-
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setSkipped((prevSkipped) => {
-      const newSkipped = new Set(prevSkipped.values());
-      newSkipped.add(activeStep);
-      return newSkipped;
-    });
-  };
+  
 
   const handleReset = () => {
     setActiveStep(0);
   };
 
+  
+
   return (
     <div className={classes.root}>
-      <Stepper activeStep={activeStep}>
+      <Stepper activeStep={activeStep} className="main-stepper" orientation={ widths ? 'vertical' : 'horizontal'}>
         {steps.map((label, index) => {
           const stepProps = {};
           const labelProps = {};
         
-          if (isStepSkipped(index)) {
-            stepProps.completed = false;
-          }
+         
           return (
-            <Step key={label} {...stepProps}>
-              <StepLabel {...labelProps}>{label}</StepLabel>
+            <Step key={label} {...stepProps} className="steps">
+              <StepLabel {...labelProps}>{label} </StepLabel>
             </Step>
           );
         })}
@@ -141,10 +124,10 @@ export default function HorizontalLinearStepper(props) {
                 Back
               </Button> : (activeStep === 1 ? <Button onClick={handleBack} className={classes.button} style={{background:"blue",color:"white"}}>
                 Back
-              </Button> : (activeStep === 2 ? <Button onClick={handleBack} className={classes.button} style={{background:"blue",color:"white"
+              </Button> : (activeStep === 2 ? <Button onClick={handleBack} className={widths ? 'button1' : classes.button} style={{background:"blue",color:"white"
             ,marginLeft:190,marginTop:-260,position:"absolute"}}>
                 Back
-              </Button>:(activeStep === 3 ? <Button onClick={handleBack} className={classes.button} style={{background:"blue",color:"white",marginLeft:960}}>
+              </Button>:(activeStep === 3 ? <Button onClick={handleBack} className={widths ? 'button2' : classes.button} style={{background:"blue",color:"white",marginLeft:960}}>
                 Back
               </Button>:null)))}
 
@@ -161,7 +144,7 @@ export default function HorizontalLinearStepper(props) {
                 variant="contained"
                 color="primary"
                 onClick={handleNext}
-                className={classes.button}
+                className={widths ? 'button1' : classes.button}
                 style={{marginLeft:280,marginTop:-260,position:"absolute"}}
               >
                 CONTINUE TO CHECKOUT
@@ -169,7 +152,7 @@ export default function HorizontalLinearStepper(props) {
                 variant="contained"
                 color="primary"
                 onClick={handleNext}
-                className={classes.button}
+                className={widths ? 'button2' : classes.button}
                 style={{marginLeft:1160,marginTop:-60}}
               >
                 BOOK  NOW

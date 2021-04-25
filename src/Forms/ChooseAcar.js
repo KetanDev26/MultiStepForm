@@ -1,7 +1,8 @@
 import { Paper } from '@material-ui/core'
 import React from 'react'
-import ChooseExtras from './ChooseExtras'
 
+import "../App.css"
+import "../Tablet.css"
 
 
 export const Cars=[
@@ -31,17 +32,17 @@ export default function ChooseAcar(props) {
 
     return (
       
-            <Paper elevation={2} style={{width:760,height:1050,marginLeft:300,background:"#f6f6f6"}}>
-                    <Paper style={{width:760,height:20,margintop:20}}><p>Results 7 out of 7</p></Paper>
+            <Paper elevation={2} style={{width:760,height:1050,marginLeft:300,background:"#f6f6f6"}} className="Form2">
+                    <Paper style={{width:760,height:20,margintop:20}} className="Form2-Strip"><p>Results 7 out of 7</p></Paper>
                     <div>
-                    <table class="table" cellPadding="40px" cellspacing="1">
+                    <table class="table" cellPadding="40px" cellspacing="1" >
                         {Cars.map((k)=>(
                            
                           
                                 <tbody>
                                       
                                     <tr>
-                                        <td scope="row"><img src={k.CarImage}></img></td>  
+                                        <td scope="row"><img src={k.CarImage} className="car-image"></img></td>  
                                        
                                         <td><div>
                                             <p>{k.type}</p>

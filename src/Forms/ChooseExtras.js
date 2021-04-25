@@ -1,13 +1,17 @@
 import { Paper } from '@material-ui/core'
 import React from 'react'
+import '../App.css';
+import "../Tablet.css"
 
 export default function ChooseExtras() {
     return (
-        <div style={{marginLeft:200}}>
+        <div style={{marginLeft:200}} className="Form3">
         
-                <Paper style={{height:40,width:300,background:"white"}} elevation={5}>Order Info</Paper>
-                <Paper style={{height:840,width:300,background:"#f6f6f6"}} elevation={5}>
-
+               
+                <Paper style={{height:840,width:300,background:"#f6f6f6"}} elevation={5} className="order-info">
+                <Paper style={{width:300,height:40,backgroundColor:"white",textAlign:"center"}} elevation={3}>
+                   Order Info
+                    </Paper>
                     <div> 
                         <label style={{backgroundColor:"#EEEEEE",width:300,color:"#7c8490",}}>CAR</label>
                         <p style={{marginLeft:-220}}>Sedan</p>
@@ -82,9 +86,12 @@ EXTRAS</label>
             
                 </Paper>
 
-                <Paper style={{ position:"absolute", height:40,width:600,background:"white",marginLeft:400,marginTop:-880}} elevation={5}>Available Extras</Paper>
-                <Paper style={{ position:"absolute", height:500,width:600,background:"#f6f6f6",marginLeft:400,marginTop:-830}} elevation={5}>
+                
+                <Paper style={{ position:"absolute", height:500,width:600,background:"#f6f6f6",marginLeft:400,marginTop:-830}} elevation={5} className="extras">
 
+                <Paper style={{width:600,height:40,backgroundColor:"white",textAlign:"center"}} elevation={3} className="strip">
+                   Avialable Extras
+                    </Paper>
                     <table class="table">
                        
                         <tbody>

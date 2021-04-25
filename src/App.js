@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import "./Tablet.css"
 import './App.css';
 import FormStepper from './FormStepper'
 
