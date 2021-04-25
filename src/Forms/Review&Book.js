@@ -184,7 +184,7 @@ EXTRAS</label>
 
 
                            
-                                <div class="form-group"  style={{width:90,marginTop:-84,marginLeft:520}} className="cvv">
+                                <div class="form-group"  style={{width:90,marginTop:-67,marginLeft:520,position:"absolute"}} className="cvv">
                                   <label for="">CVV</label>
                                   <input type="number"
                                     class="form-control" name="" id="" aria-describedby="helpId" placeholder="XXX"
@@ -193,7 +193,7 @@ EXTRAS</label>
                                 </div>
                          
 
-                                <div class="form-group" className="zipcode" >
+                                <div class="form-group" className="zipcode" style={{marginTop:20,}} >
                                   <label for="">BILLING ZIP-CODE</label>
                                   <input type="text"
                                     class="form-control" name="" id="" aria-describedby="helpId" placeholder="Zip Code"
