@@ -1,0 +1,465 @@
+/* Tablets/////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+@media  screen and  (min-width: 768px) and (max-width: 1024px) {
+  
+    /* CSS */
+    
+
+
+    .steps{
+      margin-left: 8px !important;
+      margin-right: 50px !important;
+    }
+  
+  /* Form1 contents///////////////////////////////////////////////////////////// */
+  
+  
+    .Form1{
+    position: relative !important;
+     width:500px !important;
+    margin-left: 100px !important;
+    height: 1150px !important;
+      
+    }
+  
+  
+    .Service-type{
+        position: relative !important;
+       margin-right: -500px;
+        
+    }
+  
+    .Pickdate{
+          margin-top: 80px;
+          margin-left: -350px;
+          width:190px
+    }
+  
+  
+  
+    .Picktime{
+      margin-top: 190px;
+      margin-left: -550px;
+      width:190px
+     
+  }
+  
+  
+  .passengers{
+    position: absolute;
+    margin-top: 300px;
+    margin-left:-770px;
+    width:100px ;
+  }
+  
+  
+  
+  .toAirportPickup{
+  position:absolute !important;
+  left: 55px !important;
+  top:330px !important;
+  
+    
+  
+  }
+  
+  .toAirportPickup input{
+    width: 340px !important;
+  }
+  
+  
+  .toAirportPickuplabel{
+    position:absolute !important;
+  left: 0px !important;
+  }
+  
+  
+  .toAirportDropoff{
+    position:absolute !important;
+    left: 55px !important;
+    top:500px !important;
+    
+  }
+  
+  .toAirportDropofflabel{
+    position:absolute !important;
+    left: 0px !important;
+  }
+  
+  .airportinput input{
+    width: 340px !important;
+  }
+    
+  
+  
+  .FromAirport{
+    position:absolute !important;
+  left: -50px !important;
+  top:350px !important;
+  
+  }
+  
+  .FromAirportlabel{
+     position:absolute !important;
+  left: 0px !important;
+  }
+  
+  .FromAirportinput input{
+    width:340px !important
+  }
+  
+  
+  
+  .FromAirportdropoff{
+    position:absolute !important;
+    left: 105px !important;
+    top:300px !important;
+    
+  }
+   .FromAirportdropofflabel{
+    position:absolute !important;
+    left: 0px !important;
+  }
+  
+  .FromAirportdropoff input{
+    width: 340px !important;
+  }
+  
+  .PointtoPoint{
+    position:absolute !important;
+  left: -50px !important;
+  top:400px !important;
+  }
+  
+  .PointtoPointlabel{
+    position:absolute !important;
+    left: 0px !important;
+  }
+  
+  
+  .PointtoPoint input{
+    width: 340px !important;
+  }
+  
+  .PointtoPointdropoff{
+    position:absolute !important;
+    left: 105px !important;
+    top:160px !important;
+  }
+  
+  .PointtoPointdropofflabel{
+    position:absolute !important;
+    left: 0px !important;
+  }
+  
+  
+  
+  .PointtoPointdropoff input{
+        width: 340px !important;
+  }
+  
+  /* Hourly qurter///////////////////////////////////////// */
+  
+  .ServiceHours{
+    position: absolute;
+    margin-top: 410px;
+    margin-left:-840px;
+    width:300px !important;
+  }
+  
+  
+  .occassion{
+    position: absolute;
+    margin-top: 500px;
+    margin-left:-950px;
+    width:200px !important
+  }
+  
+  
+  .pickuplocation{
+    position:absolute !important;
+    left: 50px !important;
+    top:700px !important;
+  }
+  
+  
+  
+  .hqairport{
+   position: absolute !important;
+  margin-left: -50px !important;
+    top:600px !important
+  }
+  
+  
+  .hqinput input{
+    width: 340px !important;
+  }
+  
+  .hqddress {
+    position: absolute !important;
+  margin-left: -50px !important;
+    top:800px !important
+    
+  }
+  
+  .hqddress input{
+    width: 340px !important;
+  }
+  
+  
+  
+  
+  .smalldiv{
+      overflow-y:scroll !important;
+      overflow-x: hidden !important;
+    
+      height: 150px !important;
+  }
+  
+  
+  .smalldiv::-webkit-scrollbar {
+    width: 7px;
+      
+    
+  }
+  
+  .smalldiv::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+   
+  }
+  
+  .smalldiv::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+  }
+  .hqdropoffinput input{
+    width: 240px !important;
+  }
+  
+  .hqdropoffaddinput input{
+    width: 240px !important;
+  }
+  
+  .stopbutton{
+    margin-top: 590px !important;
+    margin-left: -700px;
+    
+  }
+   
+  
+  
+  .stopbutton img{
+    margin-left: -50px;
+  }
+  
+  
+  /* Form2 contents///////////////////////////////////////////////////////////// */
+  .Form2{
+    width:500px !important;
+  margin-left: 140px !important;
+  height:1000px !important;
+  }
+  
+  .Form2-Strip{
+    width:500px !important;
+  margin-left: 0px !important;
+ 
+  }
+
+ 
+  .table p{
+    font-size: 10px;
+  }
+    
+
+  .car-image{
+    width:60px;
+  }
+ 
+  
+      
+/* Form3 contents///////////////////////////////////////////////////////////// */
+
+
+
+.order-info{
+    position: relative !important;
+    
+    left:10px !important;
+
+    
+    
+
+
+  
+  }
+  
+  .extras {
+    margin-top: 30px !important;
+    margin-left: 10px !important;
+    width:330px !important;
+    font-size: 6px !important;
+    height: 300px !important;
+  
+  }
+  
+  
+  .extras h4{
+    font-size: 15px;
+  }
+  
+  .strip{
+    width:330px !important;
+    height: 20px !important;
+  }
+  
+  .extras img{
+    width: 50px ;
+  }
+  
+  
+  .button1{
+    position: absolute !important;
+    margin-top: 350px !important;
+    left:15px !important; 
+    
+  }
+  
+  
+  /* Form4/////////////////////////////////////////////////////////////////// */
+  
+  
+  .order-info1{
+    position: relative !important;
+    
+    left:10px !important;
+  
+  
+  }
+  
+  .extras1 {
+    margin-top: 60px !important;
+    margin-left: 10px !important;
+    width:330px !important;
+    font-size: 6px !important;
+    height: 1000px !important;
+  
+  }
+  
+  
+  .extras1 h4{
+    font-size: 15px;
+  }
+  
+  .strip1{
+    width:330px !important;
+    height: 20px !important;
+  }
+  
+  
+  .reservform{
+    position: relative;
+    top:20px;
+    height: 350px;
+    
+  }
+  
+  .personal{
+    margin-top: -80px;
+    margin-left: -20px;
+    width: 330px !important;
+  }
+  
+  .phonenu{
+   position: relative;
+    left:-350px;
+   
+  }
+  
+  .emailaddress{
+    position: relative;
+    
+    top:150px !important;
+  }
+  
+  .lastname{
+    position: relative;
+    left:-350px;
+    top:90px !important;
+   
+  }
+  
+  .creditinfo{
+    position: relative;
+    top:0px;
+  
+  }
+  
+  
+  .strip3{
+    margin-top: -280px;
+    margin-left: -20px;
+    width: 330px !important;
+   
+  }
+  
+  .expdate{
+    position: relative;
+    left:-300px;
+    top:100px !important;
+  }
+  .explabel{
+    margin-top: -28px !important;
+  }
+  
+  .expyears{
+   position: absolute;
+   top:80px;
+  }
+  
+  .cvv{
+    position: relative;
+    left:-300px;
+    top:100px !important;
+  }
+  
+  .zipcode{
+    
+    position: relative;
+   
+    top:130px !important;
+  }
+  
+  
+  .strip4{
+    margin-top: -380px;
+    margin-left: -20px;
+    width: 330px !important;
+  }
+  
+  .others{
+    position: relative;
+    top:-10px !important;
+  }
+  
+  .special{
+    position: relative;
+    top:90px !important;
+  }
+  
+  .button2{
+    position: absolute !important;
+    margin-top: 20px !important;
+    left:-730px !important; 
+    
+  }
+  
+
+
+
+
+  
+    
+  }
+  

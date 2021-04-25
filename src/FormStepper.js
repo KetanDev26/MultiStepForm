@@ -47,6 +47,7 @@ export default function HorizontalLinearStepper(props) {
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
   let widths=matchMedia('(max-width: 600px)').matches;
+  let tabletwidth=matchMedia('(min-width: 768px) and (max-width: 1024px)' ).matches;
 
   function getStepContent(step) {
     switch (step) {
@@ -124,10 +125,10 @@ export default function HorizontalLinearStepper(props) {
                 Back
               </Button> : (activeStep === 1 ? <Button onClick={handleBack} className={classes.button} style={{background:"blue",color:"white"}}>
                 Back
-              </Button> : (activeStep === 2 ? <Button onClick={handleBack} className={widths ? 'button1' : classes.button} style={{background:"blue",color:"white"
+              </Button> : (activeStep === 2 ? <Button onClick={handleBack} className={widths || tabletwidth ? 'button1' : classes.button} style={{background:"blue",color:"white"
             ,marginLeft:190,marginTop:-260,position:"absolute"}}>
                 Back
-              </Button>:(activeStep === 3 ? <Button onClick={handleBack} className={widths ? 'button2' : classes.button} style={{background:"blue",color:"white",marginLeft:960}}>
+              </Button>:(activeStep === 3 ? <Button onClick={handleBack} className={widths || tabletwidth ? 'button2' : classes.button} style={{background:"blue",color:"white",marginLeft:960}}>
                 Back
               </Button>:null)))}
 
@@ -144,7 +145,7 @@ export default function HorizontalLinearStepper(props) {
                 variant="contained"
                 color="primary"
                 onClick={handleNext}
-                className={widths ? 'button1' : classes.button}
+                className={widths || tabletwidth ?  'button1' : classes.button}
                 style={{marginLeft:280,marginTop:-260,position:"absolute"}}
               >
                 CONTINUE TO CHECKOUT
@@ -152,7 +153,7 @@ export default function HorizontalLinearStepper(props) {
                 variant="contained"
                 color="primary"
                 onClick={handleNext}
-                className={widths ? 'button2' : classes.button}
+                className={widths || tabletwidth ? 'button2' : classes.button}
                 style={{marginLeft:1160,marginTop:-60}}
               >
                 BOOK  NOW
